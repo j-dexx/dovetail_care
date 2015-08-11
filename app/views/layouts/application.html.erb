@@ -5,8 +5,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
 
     <%= yield %>
+
+    <%= render 'layouts/footer' %>
 
     <%= yield :footer %>
   </body>

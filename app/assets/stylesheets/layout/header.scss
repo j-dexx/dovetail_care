@@ -1,0 +1,39 @@
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.43) 0px 0px 10px 1px;
+}
+
+.contact-form-popout {
+  background: $accent-brown;
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 85px;
+  padding: em(29px);
+}
+
+.logo {
+  padding: em(15px);
+}
+
+.telephone {
+  color: $purple;
+  font-family: $primary-sans-serif-font;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: em(25px) em(15px) em(15px);
+  margin-right: em(95px);
+
+  a {
+    color: $purple;
+    font-family: $primary-serif-font;
+    font-size: em(17px);
+    text-decoration: none;
+    font-weight: 400;
+  }
+}

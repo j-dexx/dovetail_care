@@ -1,0 +1,23 @@
+<header>
+  <%= link_to '#contact-form', class: 'contact-form-popout' do %>
+    <%= image_tag 'components/icons/email.png', alt: '' %>
+  <% end %>
+
+  <div class="logo left">
+    <%= link_to root_url, title: global_site_settings['Name'] do %>
+      <%= image_tag 'layout/header/logo.jpg', alt: global_site_settings['Name'] %>
+    <% end %>
+  </div>
+
+  <div class="telephone right">
+    Telephone: <%= link_to global_site_settings['Telephone'], "tel:#{global_site_settings['Telephone']}" %>
+  </div>
+
+  <nav class="row">
+    <div class="small-12 columns">
+      <ul>
+        <%= nested_menu_items(menu_items: @header_menu.menu_items) %>
+      </ul>
+    </div>
+  </nav>
+</header>

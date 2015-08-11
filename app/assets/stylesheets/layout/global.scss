@@ -1,0 +1,29 @@
+html,
+body {
+  font-size: 14px;
+}
+
+body {
+  font-family: $primary-sans-serif-font;
+  color: $purple;
+}
+
+a {
+  text-decoration: none;
+
+  &:link {
+
+  }
+
+  &:visited {
+
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+
+  }
+}
