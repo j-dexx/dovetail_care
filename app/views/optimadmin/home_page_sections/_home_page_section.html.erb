@@ -1,0 +1,39 @@
+<div class="row collapse module-list-index <%= cycle('odd', 'even') %>" data-equalizer="module-list" id="item_<%= home_page_section_presenter.id %>">
+  <div class="large-1 small-2 columns" data-equalizer-watch="module-list">
+    <%= home_page_section_presenter.detail_toggle_link %>
+  </div>
+
+
+    <div class="large-2 small-6 columns" data-equalizer-watch="module-list">
+      <%= home_page_section_presenter.area %>
+    </div>
+
+  <div class="large-4 small-6 columns" data-equalizer-watch="module-list">
+    <%= home_page_section_presenter.title %>
+  </div>
+
+  <div class="large-1 small-6 columns" data-equalizer-watch="module-list">
+    <%= link_to 'Manage', gallery_images_path(home_page_section_id: home_page_section_presenter.id) if home_page_section_presenter.has_gallery? %>
+  </div>
+
+
+
+    <div class="large-2 hide-for-medium-down columns" data-equalizer-watch="module-list">
+      <%= home_page_section_presenter.edit_image(:image) %>
+    </div>
+
+
+  <div class="large-1 small-4 columns" data-equalizer-watch="module-list">
+    <%= home_page_section_presenter.edit_link %>
+  </div>
+
+  <div class="large-1 hide-for-medium-down columns last" data-equalizer-watch="module-list">
+    <%= home_page_section_presenter.delete_link %>
+  </div>
+
+  <div class="row module-list-detail hide" id="index-list-<%= home_page_section_presenter.id %>">
+    <div class="small-12 columns module-list-summary last">
+      <%= home_page_section_presenter.content %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+nav {
+  ul {
+    @extend %clearfix;
+    list-style: none;
+    text-align: right;
+  }
+}
+
+.menu-link {
+  float: right;
+  display: block;
+  margin-right: em(13px);
+  padding: em(37px) em(3px) em(20px);
+  border-bottom: 3px solid $white;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+  font-family: $secondary-serif-font;
+  color: $dark-green;
+  font-size: em(12px);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-color: $dark-purple;
+    text-decoration: none;
+  }
+}

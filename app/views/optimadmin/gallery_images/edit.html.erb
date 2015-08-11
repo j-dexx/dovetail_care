@@ -1,0 +1,7 @@
+<%= render 'optimadmin/shared/header/main_title', title: 'Edit Gallery Image' %>
+
+<div class="main-content">
+  <%= render 'optimadmin/shared/module/form/back', path: gallery_images_path(home_page_section_id: @home_page_section.id), title: 'Gallery Image' %>
+
+  <%= render 'form', gallery_image: @gallery_image %>
+</div>
