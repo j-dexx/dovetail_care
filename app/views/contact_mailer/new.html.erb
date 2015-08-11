@@ -1,0 +1,40 @@
+<html lang="en">
+  <body>
+
+    <h1><%= @contact.form %></h1>
+
+    <p>
+      <strong>Name:</strong>
+      <br />
+      <%= @contact.forename %>
+      <%= @contact.surname %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <br />
+      <%= mail_to(@contact.email) %>
+    </p>
+
+    <p>
+      <strong>Telephone:</strong>
+      <br />
+      <%= mail_to(@contact.telephone) %>
+    </p>
+
+    <p>
+      <strong>Message:</strong>
+      <br />
+      <%= @contact.message %>
+    </p>
+
+    <% if @contact.callback_request == '1' %>
+      <p>
+        <strong>Requested callback?</strong>
+        <br />
+        Yes
+      </p>
+    <% end %>
+
+  </body>
+</html>
