@@ -1,0 +1,76 @@
+.form-popout {
+  background: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+  overflow: visible;
+  width: 25%;
+  height: 100%;
+  padding: em(30px) em(20px) 0;
+  box-shadow: rgba(0, 0, 0, 0.29) -1px 0px 10px 0px;
+
+  h6 {
+    font-family: $secondary-serif-font;
+    color: $deep-purple;
+    font-size: em(12px);
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 em(13px);
+  }
+
+  p {
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid $offset-white;
+    font-family: $primary-sans-serif-font;
+  }
+
+  label {
+    display: block;
+    margin-bottom: em(10px);
+  }
+}
+
+.form-popout-close-button {
+  position: absolute;
+  top: 15px;
+  right: 21px;
+  padding: em(9px) em(17px);
+  border: 2px solid $white;
+  border-radius: 21px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $light-green;
+  }
+}
+
+.form-popout-additional-information {
+  position: absolute;
+  bottom: 20px;
+}
+
+.form-popout-telephone {
+  margin: 0 0 em(14px);
+  padding: em(6px) 0 0 em(30px);
+  background: image-url('components/icons/phone-icon.png') no-repeat 0 50%;
+  background-size: 16px;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.form-popout-address {
+  margin: 0;
+  padding: em(14px, 15px) 0 0 em(30px, 15px);
+  border-top: 1px solid $offset-white;
+  background: image-url('components/icons/pin_1.png') no-repeat 0 60%;
+  background-size: 16px;
+  font-size: em(15px);
+  line-height: 1.5;
+}

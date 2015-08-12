@@ -1,5 +1,13 @@
+<section class="form-popout hide">
+  <%= link_to '#', class: 'form-popout-close-button toggle-class', title: 'Close', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
+    <%= image_tag 'components/icons/close-button.png', alt: 'Close' %>
+  <% end %>
+
+  <%= render 'contacts/sidebars/form_popout' %>
+</section>
+
 <header>
-  <%= link_to '#contact-form', class: 'contact-form-popout' do %>
+  <%= link_to '#', class: 'contact-form-popout-button toggle-class', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
     <%= image_tag 'components/icons/email.png', alt: '' %>
   <% end %>
 
@@ -9,8 +17,8 @@
     <% end %>
   </div>
 
-  <div class="telephone right">
-    Telephone: <%= link_to global_site_settings['Telephone'], "tel:#{global_site_settings['Telephone']}" %>
+  <div class="header-telephone right">
+    Telephone: <%= telephone_link %>
   </div>
 
   <nav class="row">
