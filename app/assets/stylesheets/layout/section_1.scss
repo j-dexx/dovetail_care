@@ -95,8 +95,7 @@
     line-height: 1.5;
   }
 
-  a {
-    @extend %action-button;
-    font-size: em(12px);
+  .action-button {
+    margin: em(17px) 0;
   }
 }

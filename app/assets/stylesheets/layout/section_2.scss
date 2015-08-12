@@ -1,0 +1,31 @@
+.section-2 {
+  @extend %clearfix;
+  padding: em(104px);
+
+  img {
+    border: 5px solid $light-turquoise;
+    box-shadow: $black 0px 0px 25px -9px;
+  }
+
+  p {
+    float: left;
+    line-height: 1.7;
+    max-width: 325px;
+  }
+
+  p:nth-child(2) {
+    font-family: $secondary-serif-font;
+    color: $purple;
+    font-size: em(16px);
+    text-align: left;
+    padding: em(10px, 16px) em(20px, 16px);
+  }
+
+  p:nth-child(4) {
+    font-family: $primary-sans-serif-font;
+    color: $dark-green;
+    font-size: em(13px);
+    line-height: 1.7;
+    padding: em(10px, 16px) em(20px, 16px);
+  }
+}

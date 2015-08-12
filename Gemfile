@@ -47,6 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git', group: :development
 gem 'optimadmin', git: 'git@github.com:eskimosoup/Optimadmin.git'
 
-# source 'https://rails-assets.org' do
-
-# end
+ source 'https://rails-assets.org' do
+   gem 'rails-assets-slick.js'
+ end

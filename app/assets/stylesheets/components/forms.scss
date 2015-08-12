@@ -52,6 +52,11 @@ label {
   line-height: 1.25;
   font-weight: 600;
 
+  &:link,
+  &:visited {
+    color: $white;
+  }
+
   &:hover {
     border-color: $beige;
     background-color: $light-purple;

@@ -11,6 +11,7 @@ class HomePageSection < ActiveRecord::Base
 
   AREAS = [
               ['Section 1', 'section_1'],
-              ['Section 2', 'section_2']
+              ['Section 2', 'section_2'],
+              ['Section 3', 'section_3']
             ]
 end

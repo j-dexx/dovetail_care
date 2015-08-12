@@ -1,7 +1,7 @@
 module Optimadmin
   class TeamMembersController < Optimadmin::ApplicationController
 
-    edit_images_for TeamMember, [[:image, :image_cache, :remove_image, :remote_image_url,  { show: ['fill', 250, 250] }]]
+    edit_images_for TeamMember, [[:image, { show: ['fill', 176, 176] }]]
     before_action :set_team_member, only: [:show, :edit, :update, :destroy]
 
     def index
