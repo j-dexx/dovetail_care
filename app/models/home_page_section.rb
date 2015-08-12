@@ -5,11 +5,14 @@ class HomePageSection < ActiveRecord::Base
   validates :content, presence: true
 
   scope :area, -> (area_name) { find_by(area: area_name) }
+  scope :ordered, -> { order(:area) }
 
-  has_many :gallery_images
+  has_many :gallery_images, dependent: :destroy
 
   AREAS = [
-              'Introduction',
-              'Footer'
+              ['Section 1', 'section_1'],
+              ['Section 2', 'section_2'],
+              ['Section 3', 'section_3'],
+              ['Section 4', 'section_4']
             ]
 end

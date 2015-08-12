@@ -1,0 +1,44 @@
+.slick-slider {
+  .slick-slide {
+    outline: 0;
+  }
+
+  .slick-dots {
+
+    li {
+
+    }
+
+    button:before {
+      font-size: 16px;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    width: 21px;
+    height: 35px;
+
+    &:before {
+      font-size: 0;
+    }
+  }
+
+  .slick-next {
+    background: image-url('vendor/slick/right.png');
+    right: -55px;
+    
+    &:hover {
+      background: image-url('vendor/slick/right.png');
+    }
+  }
+
+  .slick-prev {
+    background: image-url('vendor/slick/left.png');
+    left: -50px;
+
+    &:hover {
+      background: image-url('vendor/slick/left.png');
+    }
+  }
+}

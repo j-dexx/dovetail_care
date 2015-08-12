@@ -11,7 +11,7 @@ module Optimadmin
     end
 
     def area
-      home_page_section.area
+      home_page_section.area.humanize
     end
 
     def content

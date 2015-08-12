@@ -8,10 +8,33 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.valid?
       ContactMailer.new(global_site_settings, @contact).deliver_now
-      redirect_to new_contact_path, notice: 'Contact was successfully created.'
+      respond_to do |format|
+        format.js { flash[:notice] = 'Thank you for your submission. We will be in touch.' }
+      end
     else
-      render :new
+      respond_to do |format|
+        format.js { render :new }
+      end
     end
+  end
+
+  def contact_form_popout
+    respond_to do |format|
+      format.js
+    end
+
+  def recruitment_form_popout
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def request_appointment_form_popout
+    respond_to do |format|
+      format.js
+    end
+  end
+  
   end
 
   private

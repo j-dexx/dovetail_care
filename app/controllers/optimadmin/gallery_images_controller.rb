@@ -1,6 +1,6 @@
 module Optimadmin
   class GalleryImagesController < Optimadmin::ApplicationController
-    edit_images_for GalleryImage, [[:image, { square: ['fill', 250, 250], potrait: ['fill', 250, 250], landscape: ['fill', 250, 250] }]]
+    edit_images_for GalleryImage, [[:image, { square: ['fill', 185, 185], potrait: ['fill', 212, 184], landscape: ['fill', 212, 184] }]]
 
     before_action :set_home_page_section, except: [:create, :edit, :update, :destroy]
     before_action :set_gallery_image, only: [:show, :edit, :update, :destroy]

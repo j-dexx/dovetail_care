@@ -1,0 +1,41 @@
+.team-member-summary-wrap {
+  padding-top: em(30px);
+
+  .team-member-summary {
+    position: relative;
+    width: 100%;
+    min-height: 170px;
+    padding: em(37px) em(21px) em(16px);
+    border-radius: 15px;
+    background-color: $white;
+  }
+
+  .quote {
+    position: absolute;
+
+    &.open {
+      top: -5px;
+      left: 20px;
+    }
+
+    &.close {
+      bottom: 20px;
+      right: 0;
+    }
+
+    &.tip {
+      bottom: -14px;
+      left: 20px;
+    }
+  }
+
+  p {
+    padding: em(24px, 14px);
+    margin: 0 0 em(27px, 14px);
+    font-family: $secondary-sans-serif-font;
+    color: $deep-purple;
+    font-size: em(14px);
+    line-height: 1.4;
+    text-align: center;
+  }
+}

@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:eskimosoup/Optimadmin.git
-  revision: f39304d4ff3c98d4ceb012b91d53674e15026580
+  revision: 289124e2b4bac03958abc1e01cc14dda76471103
   specs:
     optimadmin (0.0.1)
       bcrypt
@@ -23,6 +23,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.3)
       actionpack (= 4.2.3)
@@ -163,6 +164,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.3)
       sprockets-rails
+    rails-assets-jquery (2.1.4)
+    rails-assets-slick.js (1.5.7)
+      rails-assets-jquery (>= 1.7)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.6)
@@ -207,7 +211,7 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.5)
+    tzinfo-data (1.2015.6)
       tzinfo (>= 1.0.0)
     uglifier (2.7.1)
       execjs (>= 0.3.0)
@@ -233,6 +237,7 @@ DEPENDENCIES
   optimadmin_generators!
   pg
   rails (= 4.2.3)
+  rails-assets-slick.js!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   tzinfo-data

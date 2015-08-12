@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :contacts
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: [:new, :create] do
+    collection do
+      get 'contact_form_popout'
+      get 'recruitment_form_popout'
+      get 'request_appointment_form_popout'
+    end
+  end
   mount Optimadmin::Engine => "/admin"
   root to: "application#index"
 end

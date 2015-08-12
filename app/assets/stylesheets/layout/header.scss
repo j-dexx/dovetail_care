@@ -1,4 +1,6 @@
 header {
+  background: $white;
+  top: 0;
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -6,7 +8,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.43) 0px 0px 10px 1px;
 }
 
-.contact-form-popout {
+.contact-form-popout-button {
   background: $accent-brown;
   position: absolute;
   right: 0;
@@ -20,7 +22,7 @@ header {
   padding: em(15px);
 }
 
-.telephone {
+.header-telephone {
   color: $purple;
   font-family: $primary-sans-serif-font;
   font-weight: 600;

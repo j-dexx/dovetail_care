@@ -1,0 +1,101 @@
+%section-1-item-border {
+  border: 4px solid $white;
+}
+
+.section-1 {
+  padding-top: em(175px);
+  min-height: 636px;
+  background-color: #bcdfbc;
+  background-image: image-url('layout/sections/section-1/overlay-element.png'), image-url('layout/sections/section-1/blossom-bg.jpg');
+  background-position: 50% 86%, 0% 0%;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  text-align: center;
+
+  img,
+  .content {
+    @extend %section-1-item-border;
+  }
+}
+
+.section-1-left {
+  overflow: visible;
+
+  img {
+    position: relative;
+    max-width: none;
+  }
+
+  .gallery-image-0 {
+    left: 30px;
+    top: 72px;
+    right: -31px;
+    width: 193px;
+    z-index: 1;
+  }
+
+  .gallery-image-1 {
+    left: -165px;
+    top: -1px;
+    right: -75px;
+  }
+
+  .gallery-image-2 {
+    left: 23px;
+    top: -90px;
+    right: -22px;
+    z-index: 1;
+  }
+}
+
+.section-1-right {
+  overflow: visible;
+
+  img {
+    position: relative;
+    max-width: none;
+  }
+
+  .gallery-image-0 {
+    left: -31px;
+    top: 36px;
+    z-index: 2;
+  }
+
+  .gallery-image-1 {
+    left: 122px;
+    top: -27px;
+    right: -180px;
+    z-index: 1;
+  }
+
+  .gallery-image-2 {
+    left: -30px;
+    top: -122px;
+  }
+}
+
+.section-1-content {
+  position: relative;
+  z-index: 3;
+  padding: em(70px) em(21px);
+  border: 5px solid $white;
+  background: $pastel-green;
+  box-shadow: $dark-green 0px 0px 20px 0px;
+
+  h1 {
+    margin: 0 0 em(9px, 21px);
+    padding: 0 em(20px, 21px);
+    font-family: $secondary-serif-font;
+    color: $dark-green;
+    font-size: em(21px);
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .action-button {
+    margin: em(17px) 0;
+  }
+}

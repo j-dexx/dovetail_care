@@ -1,0 +1,31 @@
+<%= content_for :head do %>
+  <script>
+    $(document).ready(function() {
+      $('.team-members-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        //autoplay: true,
+        //autoplaySpeed: 2000,
+      });
+    });
+  </script>
+<% end %>
+<section class="<%= home_page_section_presenter.css_class %>">
+  <div class="row">
+    <div class="small-12 columns">
+        <h3><%= home_page_section_presenter.title %></h3>
+
+        <div class="team-members-slider">
+          <%= render partial: 'team_members/team_member', collection: @team_members, as: :team_member_presenter %>
+        </div>
+
+        <div class="text-center">
+          <%= link_to 'Join our amazing team', recruitment_form_popout_contacts_path,
+              remote: true, class: 'action-button open-sidebar',
+              data: { container: '.form-popout', class: 'hide', return: 'true '}
+          %>
+        </div>
+    </div>
+  </div>
+</section>

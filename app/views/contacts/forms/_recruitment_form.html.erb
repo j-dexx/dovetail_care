@@ -1,7 +1,7 @@
-<%= form_for(@contact) do |f| %>
+<%= form_for @contact, remote: true do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this form being submitted:</h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |message| %>
@@ -12,33 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :forename %><br>
+    <%= f.label :forename %>
     <%= f.text_field :forename %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br>
+    <%= f.label :surname %>
     <%= f.text_field :surname %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :telephone %><br>
+    <%= f.label :telephone %>
     <%= f.text_field :telephone %>
   </div>
   <div class="field">
-    <%= f.label :callback_request, "Please check this box if you would like us to call you back" %><br>
-    <%= f.check_box :callback_request %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br>
+    <%= f.label :message %>
     <%= f.text_area :message %>
   </div>
 
-  <%= f.hidden_field :form, value: 'Request appointment' %>
-  
+  <%= f.hidden_field :form, value: 'Recruitment' %>
+
   <div class="actions">
-    <%= f.submit 'Request appointment' %>
+    <%= f.submit 'Submit' %>
   </div>
 <% end %>
