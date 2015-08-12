@@ -28,4 +28,9 @@ class HomePageSectionPresenter < BasePresenter
   def has_gallery?
     home_page_section.has_gallery
   end
+
+  def gallery_images(offset = 0, total = 10)
+    return unless home_page_section.has_gallery?
+    h.render home_page_section.gallery_images.limit(total).offset(offset)
+  end
 end

@@ -1,13 +1,15 @@
 <section class="form-popout hide">
-  <%= link_to '#', class: 'form-popout-close-button toggle-class', title: 'Close', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
+  <%= link_to '#', remote: true, class: 'form-popout-close-button toggle-class', title: 'Close', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
     <%= image_tag 'components/icons/close-button.png', alt: 'Close' %>
   <% end %>
 
-  <%= render 'contacts/sidebars/form_popout' %>
+  <div id="form-area">
+    Loading...
+  </div>
 </section>
 
 <header>
-  <%= link_to '#', class: 'contact-form-popout-button toggle-class', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
+  <%= link_to contact_form_popout_contacts_path, remote: true, class: 'contact-form-popout-button open-sidebar', data: { container: '.form-popout', class: 'hide', return: 'true' } do %>
     <%= image_tag 'components/icons/email.png', alt: '' %>
   <% end %>
 

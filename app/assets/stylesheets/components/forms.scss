@@ -26,10 +26,18 @@ label {
       outline: 1px solid $pastel-green;
     }
   }
+
+  input[type='checkbox'] {
+    margin: 0 em(12px, 14px);
+    font-size: em(14px);
+    color: $offset-black;
+    vertical-align: middle;
+    border-top: 1px solid $offset-white;
+    border-radius: 3px;
+  }
 }
 
-.action-button,
-input[type='submit'] {
+%action-button {
   display: inline-block;
   margin: em(8px, 12px) auto em(4px, 12px);
   padding: em(11px, 12px) em(12px, 12px);
@@ -47,9 +55,15 @@ input[type='submit'] {
   &:hover {
     border-color: $beige;
     background-color: $light-purple;
+    text-decoration: none;
   }
 
   &:focus {
     outline: 0;
   }
+}
+
+.action-button,
+input[type='submit'] {
+  @extend %action-button;
 }
