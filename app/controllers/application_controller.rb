@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
     @home_page_sections = BaseCollectionPresenter.new(collection: HomePageSection.ordered, view_template: view_context, presenter: HomePageSectionPresenter)
     @testimonials = BaseCollectionPresenter.new(collection: Testimonial.displayed, view_template: view_context, presenter: TestimonialPresenter)
     @team_members = BaseCollectionPresenter.new(collection: TeamMember.displayed, view_template: view_context, presenter: TeamMemberPresenter)
+    @services = Service.displayed
+    @frequently_asked_questions = BaseCollectionPresenter.new(collection: FrequentlyAskedQuestion.displayed, view_template: view_context, presenter: FrequentlyAskedQuestionPresenter)
   end
 
   private

@@ -1,0 +1,17 @@
+<div class="faq-question">
+  <%= frequently_asked_question_presenter.linked_question %>
+</div>
+
+<div class="hide">
+  <div id="faq-<%= frequently_asked_question_presenter.id %>">
+    <div class="faq-content-question">
+      <%= image_tag 'components/icons/faq-content-q.png', alt: '' %>
+      <%= frequently_asked_question_presenter.question %>
+    </div>
+
+    <div class="faq-content-answer">
+      <%= image_tag 'components/icons/faq-content-a.png', alt: '' %>
+      <%= frequently_asked_question_presenter.answer %>
+    </div>
+  </div>
+</div>

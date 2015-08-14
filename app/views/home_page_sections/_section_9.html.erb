@@ -1,0 +1,48 @@
+<section class="<%= home_page_section_presenter.css_class %>">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="text-center">
+        <h5><%= home_page_section_presenter.title %></h5>
+
+        <%= home_page_section_presenter.content %>
+      </div>
+
+      <div class="contact-content-wrap">
+        <div class="row collapse">
+          <div class="small-12 medium-5 columns">
+            <div class="contact-detail">
+              <strong class="block">Registered Office</strong>
+              <%= global_site_settings['Address'] %>
+            </div>
+
+            <div class="contact-detail">
+              <strong>Telephone</strong> <%= telephone_link %>
+            </div>
+
+            <div class="contact-detail">
+              <strong>Facsimile</strong> <%= global_site_settings['Facsimle'] %>
+            </div>
+
+            <div class="contact-detail">
+              <strong>Email</strong> <%= global_site_settings['Email'] %>
+            </div>
+
+            <div class="contact-detail">
+              <strong class="block">Emergency Telephone</strong>
+              <%= global_site_settings['Emergency telephone'] %>
+            </div>
+
+            <div class="contact-detail">
+              <strong>Office Hours</strong>
+              <%= global_site_settings['Office hours'] %>
+            </div>
+          </div>
+
+          <div class="small-12 medium-7 columns">
+            <%= render 'contacts/sidebars/inpage_contact_form' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

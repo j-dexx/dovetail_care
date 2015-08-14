@@ -2,5 +2,5 @@ class FrequentlyAskedQuestion < ActiveRecord::Base
   validates :question, :answer, presence: true
 
   scope :positioned, -> { order(:position) }
-  scope :displayed, -> { where(display: true).positioned }
+  scope :displayed, -> { where(display: true).positioned.limit(6) }
 end

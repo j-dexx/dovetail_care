@@ -1,10 +1,13 @@
 .section-4 {
-  background: image-url('layout/sections/section-4/background.png') no-repeat;
-  background-position: 119% 100%;
-  padding: em(70px) 0 em(103px);
 
-  @media screen and (min-width: 1774px) {
-    background-position: 90% 100%;
+  .content-background {
+    @media screen and (min-width: 1400px) {
+      background: image-url('layout/sections/section-4/background.png') no-repeat;
+      background-position: 98% 100%;
+    }
+    width: 100%;
+    margin: 0 auto;
+    padding: em(70px) 0 em(103px);
   }
 
   h2 {

@@ -1,0 +1,56 @@
+.section-9 {
+  padding: em(40px) 0;
+  background-color: $pastel-green;
+  background-image: -webkit-linear-gradient(#bcdfbc, rgba(140, 204, 166, 0.21)), image-url('layout/sections/section-9/background.jpg');
+  background-image: linear-gradient(#bcdfbc, rgba(140, 204, 166, 0.21)), image-url('layout/sections/section-9/background.jpg');
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+
+  h5 {
+    margin: em(20px, 29px) 0 em(40px, 29px);
+    font-family: $primary-serif-font;
+    color: $deep-purple;
+    font-size: em(29px);
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  p {
+    font-family: $secondary-sans-serif-font;
+    margin-bottom: em(44px);
+    line-height: 1.4;
+  }
+
+  strong {
+    font-weight: 900;
+    line-height: 1.75;
+    text-transform: uppercase;
+
+    &.block {
+      display: block;
+    }
+  }
+
+  .contact-detail {
+    margin: 0 em(10px) em(10px) 0;
+    font-family: $secondary-sans-serif-font;
+  }
+
+  label {
+    font-weight: 600;
+    margin: 0 0 em(5px) em(10px);
+  }
+}
+
+.contact-content-wrap {
+  background: $white;
+  padding: em(33px) em(31px) em(25px);
+  border: 5px solid $pastel-green;
+  box-shadow: $dark-green 0px 0px 21px -3px;
+
+  .form-area {
+    border-left: 2px solid $pastel-green;
+    padding-left: em(29px);
+  }
+}

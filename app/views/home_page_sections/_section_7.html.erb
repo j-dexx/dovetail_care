@@ -1,0 +1,16 @@
+<section class="<%= home_page_section_presenter.css_class %>">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="text-center">
+        <h3><%= home_page_section_presenter.title %></h2>
+
+        <%= home_page_section_presenter.content %>
+      </div>
+      
+      <div class="faq-wrap">
+        <%= render partial: 'frequently_asked_questions/frequently_asked_question',
+                  collection: @frequently_asked_questions,
+                  as: :frequently_asked_question_presenter %>
+      </div>
+  </div>
+</section>

@@ -6,7 +6,7 @@ module Optimadmin
     before_action :set_gallery_image, only: [:show, :edit, :update, :destroy]
 
     def index
-      @gallery_images = Optimadmin::BaseCollectionPresenter.new(collection: GalleryImage.where('title LIKE ?', "#{params[:search]}%").page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::GalleryImagePresenter)
+      @gallery_images = Optimadmin::BaseCollectionPresenter.new(collection: GalleryImage.where('title LIKE ? AND home_page_section_id = ?', "#{params[:search]}%", @home_page_section.id).page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::GalleryImagePresenter)
     end
 
     def show

@@ -1,0 +1,35 @@
+.service-container {
+  text-align: center;
+  top: -55px;
+  margin-bottom: em(7px);
+  padding: em(43px) em(71px);
+  border: 5px solid $white;
+  background-color: $pastel-green;
+  box-shadow: $dark-green 0px 0px 20px 0px;
+  position: absolute;
+}
+
+%service-item {
+  margin: 0 0 em(31px, 15px);
+  padding: 0 0 em(22px, 15px);
+  border-bottom: 4px solid $white;
+  font-family: $secondary-serif-font;
+  color: $deep-purple;
+  font-size: em(15px);
+  display: block;
+}
+
+.service-list {
+  .service-item {
+    @extend %service-item;
+  }
+
+  a {
+    @extend %service-item;
+
+    &:hover {
+      text-decoration: none;
+      border-color: $light-green;
+    }
+  }
+}
