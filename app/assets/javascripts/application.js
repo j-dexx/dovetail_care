@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require slick.js.js
+//= require vendor/onscreen
+//= require wow
 //= require_tree .
