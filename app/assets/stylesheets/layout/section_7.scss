@@ -1,0 +1,25 @@
+.section-7 {
+  padding: em(144px) 0 em(104px) 0;
+  background-image: image-url('layout/sections/section-7/background.png');
+  background-position: 28% -2%;
+  background-repeat: no-repeat;
+
+  h3 {
+    margin: em(20px, 29px) 0 em(40px, 29px);
+    font-family: $primary-serif-font;
+    color: $deep-purple;
+    font-size: em(29px);
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  p {
+    margin: 0 0 em(30px, 18px);
+    padding: 0 0 em(8px, 18px);
+    font-family: $secondary-serif-font;
+    font-size: em(18px);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}

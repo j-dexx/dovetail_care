@@ -5,7 +5,7 @@ module Optimadmin
     before_action :set_home_page_section, only: [:show, :edit, :update, :destroy]
 
     def index
-      @home_page_sections = Optimadmin::BaseCollectionPresenter.new(collection: HomePageSection.where('title LIKE ?', "#{params[:search]}%").page(params[:page]).per(params[:per_page] || 15), view_template: view_context, presenter: Optimadmin::HomePageSectionPresenter)
+      @home_page_sections = Optimadmin::BaseCollectionPresenter.new(collection: HomePageSection.where('title LIKE ?', "#{params[:search]}%").page(params[:page]).per(params[:per_page] || 15).ordered, view_template: view_context, presenter: Optimadmin::HomePageSectionPresenter)
     end
 
     def show

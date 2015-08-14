@@ -3,7 +3,17 @@
     <%= image_tag 'components/icons/close-button.png', alt: 'Close' %>
   <% end %>
 
-  <div id="form-area">
+  <div class="form-area">
+    Loading...
+  </div>
+</section>
+
+<section class="faq-popout hide">
+  <%= link_to '#', remote: true, class: 'faq-popout-close-button toggle-class', title: 'Close', data: { container: '.faq-popout', class: 'hide', return: 'false' } do %>
+    Close
+  <% end %>
+
+  <div class="faq-popout-content">
     Loading...
   </div>
 </section>

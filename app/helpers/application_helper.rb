@@ -11,6 +11,8 @@ module ApplicationHelper
         'request_appointment_form_popout'
       when 'recruitment'
         'recruitment_form_popout'
+      when 'inpage_contact'
+        'inpage_contact_form'
       else
         'contact_form_popout'
       end

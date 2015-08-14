@@ -1,0 +1,27 @@
+.faq-wrap {
+  @extend  %clearfix;
+}
+
+.faq-question {
+  a {
+    display: block;
+    float: left;
+    background: image-url('components/icons/q.png') no-repeat 0 0;
+    padding: 0 0 0 em(53px);
+    font-family: $secondary-serif-font;
+    color: $dark-green;
+    font-weight: 700;
+    margin-bottom: em(46px);
+
+    @media screen and (min-width: 768px) {
+      width: 30%;
+      margin-right: 3%;
+    }
+
+    span {
+      padding: 0 0 em(15px) 0;
+      display: inline-block;
+      border-bottom: 2px solid $dark-purple;
+    }
+  }
+}

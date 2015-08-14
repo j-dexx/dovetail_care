@@ -1,0 +1,25 @@
+.testimonials {
+  position: relative;
+
+  .quote {
+    position: absolute;
+
+    &.open {
+      top: 0;
+      left: 20px;
+    }
+
+    &.close {
+      bottom: -40px;
+      right: 0;
+    }
+  }
+}
+
+.testimonial {
+  width: 95%;
+  padding: em(36px) em(13px) em(58px);
+  line-height: 2;
+  text-align: center;
+  position: relative;
+}

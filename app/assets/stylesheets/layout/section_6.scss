@@ -1,0 +1,44 @@
+.section-6 {
+  padding: em(104px) 0;
+
+  h2 {
+    margin: em(20px, 29px) 0 em(40px, 29px);
+    font-family: $primary-serif-font;
+    color: $deep-purple;
+    font-size: em(29px);
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  p {
+    font-size: em(13px);
+    line-height: 1.7;
+    margin: 0 0 em(20px, 13px);
+  }
+}
+
+.team-reliance-images {
+  img {
+    display: inline-block;
+    border: 5px solid $light-turquoise;
+    margin-left: em(10px);
+
+    &:nth-child(1) {
+      margin-top: em(55px);
+      margin-bottom: em(20px);
+    }
+
+    &:nth-child(2) {
+
+    }
+
+    &:nth-child(3) {
+      margin-bottom: em(30px);
+    }
+
+    &:nth-child(4) {
+
+    }
+  }
+}

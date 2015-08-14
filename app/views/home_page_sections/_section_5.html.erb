@@ -1,0 +1,21 @@
+<section class="<%= home_page_section_presenter.css_class %>">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="service-container">
+        <h2><%= home_page_section_presenter.title %></h2>
+
+        <%= home_page_section_presenter.content %>
+
+        <div class="row service-list">
+          <% @services.in_groups(3, false).each do |service_group| %>
+            <div class="small-12 medium-4 columns">
+              <% service_group.each do |service| %>
+                <%= render 'services/service', service_presenter: ServicePresenter.new(object: service, view_template: self) %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

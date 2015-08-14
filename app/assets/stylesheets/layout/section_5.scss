@@ -1,0 +1,27 @@
+.section-5 {
+  height: 530px;
+  max-height: 530px;
+  background: $pastel-green image-url('layout/sections/section-5/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+
+  h2 {
+    margin: em(20px, 29px) 0 em(40px, 29px);
+    font-family: $primary-serif-font;
+    color: $deep-purple;
+    font-size: em(29px);
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  p {
+    margin: 0 0 em(44px);
+    font-family: $secondary-sans-serif-font;
+    color: $deep-purple;
+    font-size: em(15px);
+    line-height: 1.6;
+  }
+}
