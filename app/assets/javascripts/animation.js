@@ -2,11 +2,14 @@
 function wowInit() {
   wow = new WOW(
     {
-      boxClass:     'onScreen',      // default
+      boxClass:     'wow',      // default
       animateClass: 'animated', // default
-      offset:       92,          // default
-      mobile:       true,       // default
-      live:         true        // default
+      offset:       0,          // default
+      mobile:       false,       // default
+      live:         false,        // default
+      callback:     function(box) {
+        //$(box).toggleClass('finished animate');
+      }
     }
   );
   wow.init();
@@ -14,16 +17,23 @@ function wowInit() {
 
 wowInit();
 
+/*
 $(function() {
-  $('.wow').onScreen({
+  $('section').onScreen({
     tolerance: 0,
-    toggleClass: false,
+    toggleClass: 'onScreen',
     doIn: function() {
-      $(this).addClass('onScreen');
+      //wow.stop();
       wowInit();
+      $('.onScreen .wow:not(.finished)').addClass('animate');
+    },
+    doOut: function() {
+      setTimeout(function() { $('.wow:not(.onScreen .wow)').removeClass('finished animate animated').attr('style', ''); }, 500);
     }
   });
 });
+*/
+
 
 // https://github.com/matthieua/WOW/issues/20
 /*
