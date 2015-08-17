@@ -7,8 +7,8 @@
         <%= home_page_section_presenter.content %>
 
         <div class="row service-list">
-          <% @services.in_groups(3, false).each do |service_group| %>
-            <div class="small-12 medium-4 columns">
+          <% @services.in_groups(3, false).each_with_index do |service_group, index| %>
+            <div class="small-12 medium-4 columns wow slideInUp" data-wow-delay=".<%= index * 25 %>s">
               <% service_group.each do |service| %>
                 <%= render 'services/service', service_presenter: ServicePresenter.new(object: service, view_template: self) %>
               <% end %>
