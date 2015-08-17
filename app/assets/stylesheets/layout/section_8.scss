@@ -1,6 +1,10 @@
 .section-8 {
   padding: em(54px) em(54px) em(145px);
 
+  @include responsive-to(mobile) {
+    padding: em(54px) em(30px);
+  }
+
   h4 {
     margin: em(20px, 29px) 0 em(40px, 29px);
     font-family: $primary-serif-font;

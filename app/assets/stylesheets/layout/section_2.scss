@@ -2,6 +2,13 @@
   @extend %clearfix;
   padding: em(104px);
 
+  @include responsive-to(mobile) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+
   img {
     border: 5px solid $light-turquoise;
     box-shadow: $black 0px 0px 25px -9px;
@@ -11,6 +18,17 @@
     float: left;
     line-height: 1.7;
     max-width: 325px;
+
+    @include responsive-to(mobile) {
+      float: none;
+      max-width: none;
+    }
+  }
+
+  @include responsive-to(tablet) {
+    p:nth-child(3) {
+      clear: left;
+    }
   }
 
   p:nth-child(2) {

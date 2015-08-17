@@ -15,4 +15,5 @@
 //= require slick.js.js
 //= require vendor/onscreen
 //= require wow
+//= require components/scroll_up
 //= require_tree .

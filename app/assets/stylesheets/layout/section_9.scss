@@ -27,6 +27,10 @@
     line-height: 1.75;
     text-transform: uppercase;
 
+    @include responsive-to(mobile) {
+      display: block;
+    }
+
     &.block {
       display: block;
     }

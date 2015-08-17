@@ -7,3 +7,19 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
+
+.scroll-up {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 9999;
+  width: 50px;
+  border-radius: 27px;
+  background: $white;
+
+  @include responsive-to(mobile) {
+    right: 20px;
+    bottom: 30px;
+    width: 30px;
+  }
+}

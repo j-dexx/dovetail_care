@@ -10,6 +10,19 @@
   padding: em(30px) em(20px) 0;
   box-shadow: rgba(0, 0, 0, 0.29) -1px 0px 10px 0px;
 
+  @include responsive-to(tablet) {
+    padding-top: em(10px);
+    padding-bottom: em(10px);
+    overflow: scroll;
+    width: 50%;
+  }
+
+  @include responsive-to(mobile) {
+    width: 100vw;
+    padding: em(10px) em(30px);
+    overflow: scroll;
+  }
+
   h6 {
     font-family: $secondary-serif-font;
     color: $deep-purple;
@@ -44,6 +57,22 @@
   color: $white;
   text-decoration: none;
 
+  @include responsive-to(tablet) {
+    position: static;
+    display: block;
+    text-align: right;
+    margin: em(5px);
+  }
+
+  @include responsive-to(mobile) {
+    position: static;
+    display: block;
+    text-align: right;
+    margin: em(5px);
+    top: 6px;
+    right: 51px;
+  }
+
   &:hover {
     background-color: $light-green;
   }
@@ -52,6 +81,14 @@
 .form-popout-additional-information {
   position: absolute;
   bottom: 20px;
+
+  @include responsive-to(tablet) {
+    position: static;
+  }
+
+  @include responsive-to(mobile) {
+    position: static;
+  }
 }
 
 .form-popout-telephone {

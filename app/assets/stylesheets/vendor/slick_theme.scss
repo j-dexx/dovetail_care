@@ -27,7 +27,11 @@
   .slick-next {
     background: image-url('vendor/slick/right.png');
     right: -55px;
-    
+
+    @include responsive-to(tablet) {
+      right: -38px;
+    }
+
     &:hover {
       background: image-url('vendor/slick/right.png');
     }
@@ -36,6 +40,10 @@
   .slick-prev {
     background: image-url('vendor/slick/left.png');
     left: -50px;
+
+    @include responsive-to(tablet) {
+      left: -30px;
+    }
 
     &:hover {
       background: image-url('vendor/slick/left.png');

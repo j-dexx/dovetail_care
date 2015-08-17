@@ -1,5 +1,5 @@
 <section class="form-popout hide">
-  <%= link_to '#', remote: true, class: 'form-popout-close-button toggle-class', title: 'Close', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
+  <%= link_to '#', class: 'form-popout-close-button toggle-class', title: 'Close', data: { container: '.form-popout', class: 'hide', return: 'false' } do %>
     <%= image_tag 'components/icons/close-button.png', alt: 'Close' %>
   <% end %>
 
@@ -9,9 +9,19 @@
 </section>
 
 <section class="faq-popout hide">
-  <%= link_to '#', remote: true, class: 'faq-popout-close-button toggle-class', title: 'Close', data: { container: '.faq-popout', class: 'hide', return: 'false' } do %>
+  <%= link_to '#',  class: 'faq-popout-close-button toggle-class', title: 'Close', data: { container: '.faq-popout', class: 'hide', return: 'false' } do %>
     Close
   <% end %>
+
+  <div class="faq-navigation">
+    <%= link_to '#',  class: 'faq-popout-navigation-button left' do %>
+      <
+    <% end %>
+
+    <%= link_to '#',  class: 'faq-popout-navigation-button right' do %>
+      >
+    <% end %>
+  </div>
 
   <div class="faq-popout-content">
     Loading...
@@ -33,8 +43,12 @@
     Telephone: <%= telephone_link %>
   </div>
 
-  <nav class="row">
-    <div class="small-12 columns">
+  <%= link_to '#navigation', class: 'toggle-navigation show-for-medium-down toggle-class', title: 'Show navigation', data: { class: 'hide-for-medium-down', container: 'nav', return: 'false '} do %>
+    <%= image_tag 'components/icons/burger-menu.png', alt: 'Navigation' %>
+  <% end %>
+
+  <nav class="row hide-for-medium-down">
+    <div class="small-12 medium-8 columns">
       <ul>
         <%= nested_menu_items(menu_items: @header_menu.menu_items) %>
       </ul>

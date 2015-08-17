@@ -20,6 +20,10 @@ a.menu-link {
   font-weight: 700;
   text-transform: uppercase;
 
+  @include responsive-to(mobile) {
+    padding: em(10px) em(3px);
+  }
+
   &:hover {
     border-bottom-style: solid;
     border-bottom-color: $dark-purple;
