@@ -12,10 +12,17 @@
     color: $dark-green;
     font-weight: 700;
     margin-bottom: em(46px);
+    width: 30%;
+    margin-right: 3%;
 
-    @media screen and (min-width: 768px) {
-      width: 30%;
-      margin-right: 3%;
+    @include responsive-to(tablet) {
+      width: 45%;
+      margin-right: 5%;
+    }
+
+    @include responsive-to(mobile) {
+      width: 100%;
+      margin-right: 0;
     }
 
     span {

@@ -24,6 +24,14 @@
     border: 5px solid $light-turquoise;
     margin-left: em(10px);
 
+    @include responsive-to(tablet) {
+      width: 40%;
+    }
+
+    @include responsive-to(mobile) {
+      display: none;
+    }
+
     &:nth-child(1) {
       margin-top: em(55px);
       margin-bottom: em(20px);

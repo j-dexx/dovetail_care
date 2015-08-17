@@ -5,8 +5,8 @@ class FrequentlyAskedQuestionPresenter < BasePresenter
     frequently_asked_question.id
   end
 
-  def linked_question
-    h.link_to "#faq-#{frequently_asked_question.id}", class: 'open-faq', data: { container: '.faq-popout', class: 'hide', return: "false", content: "#faq-#{frequently_asked_question.id}" } do
+  def linked_question(faq_count)
+    h.link_to "#faq-#{frequently_asked_question.id}", class: 'open-faq', data: { container: '.faq-popout', class: 'hide', return: "false", content: "#faq-#{frequently_asked_question.id}", faq: faq_count } do
       h.content_tag :span, frequently_asked_question.question
     end
   end

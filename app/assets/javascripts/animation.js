@@ -36,8 +36,8 @@ $(function() {
 
 
 // https://github.com/matthieua/WOW/issues/20
-/*
-$(document).on('mouseover', 'img', function () {
+
+$(document).on('mouseover', '.scroll-up', function () {
     var $this = $(this);
     var effect = 'bounceIn';
 
@@ -47,4 +47,3 @@ $(document).on('mouseover', 'img', function () {
         $this.removeClass('animated ' + effect);
     });
 });
-*/

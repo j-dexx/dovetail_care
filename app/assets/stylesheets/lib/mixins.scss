@@ -1,0 +1,13 @@
+// Media queries
+$mq-phone:   'only screen and (max-width: 767px)';
+$mq-tablet:  'only screen and (min-width: 768px) and (max-width: 1024px)';
+
+// Use responsive-to for styles that are not shared
+// e.g. @include responsive-to(mobile) { color: red; }
+@mixin responsive-to($media) {
+  @if $media == mobile {
+    @media #{$mq-phone} { @content; }
+  } @else if $media == tablet {
+    @media #{$mq-tablet} { @content; }
+  }
+}

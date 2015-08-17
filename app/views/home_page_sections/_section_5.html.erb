@@ -8,7 +8,7 @@
 
         <div class="row service-list">
           <% @services.in_groups(3, false).each_with_index do |service_group, index| %>
-            <div class="small-12 medium-4 columns wow slideInUp" data-wow-delay=".<%= index * 25 %>s">
+            <div class="small-12 medium-6 large-4 <%= 'end' if (index - 1) == service_group.count %> columns wow slideInUp" data-wow-delay=".<%= index * 25 %>s">
               <% service_group.each do |service| %>
                 <%= render 'services/service', service_presenter: ServicePresenter.new(object: service, view_template: self) %>
               <% end %>

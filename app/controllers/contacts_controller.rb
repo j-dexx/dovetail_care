@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     if @contact.valid?
       ContactMailer.new(global_site_settings, @contact).deliver_now
       respond_to do |format|
-        format.js { flash[:notice] = 'Thank you for your submission. We will be in touch.' }
+        format.js { flash.now[:notice] = 'Thank you for your submission. We will be in touch.' }
       end
     else
       respond_to do |format|
@@ -34,7 +34,7 @@ class ContactsController < ApplicationController
       format.js
     end
   end
-  
+
   end
 
   private

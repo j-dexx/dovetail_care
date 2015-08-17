@@ -13,6 +13,16 @@
   background-attachment: scroll, fixed;
   text-align: center;
 
+  @include responsive-to(mobile) {
+    padding-top: em(132px);
+  }
+
+  @include responsive-to(tablet) {
+    .gallery-image-1 {
+      display: none;
+    }
+  }
+
   img,
   .content {
     @extend %section-1-item-border;
@@ -46,6 +56,10 @@
     top: -90px;
     right: -22px;
     z-index: 1;
+
+    @include responsive-to(tablet) {
+      top: 90px;
+    }
   }
 }
 
@@ -73,6 +87,10 @@
   .gallery-image-2 {
     left: -30px;
     top: -122px;
+
+    @include responsive-to(tablet) {
+      top: 102px;
+    }
   }
 }
 

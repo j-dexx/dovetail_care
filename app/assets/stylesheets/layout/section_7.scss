@@ -4,6 +4,11 @@
   background-position: 28% -2%;
   background-repeat: no-repeat;
 
+  @include responsive-to(mobile) {
+    padding-top: 0;
+    background-position: 28% 0;
+  }
+
   h3 {
     margin: em(20px, 29px) 0 em(40px, 29px);
     font-family: $primary-serif-font;

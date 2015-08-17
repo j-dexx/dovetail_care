@@ -7,6 +7,12 @@
   background-color: $pastel-green;
   box-shadow: $dark-green 0px 0px 20px 0px;
   position: absolute;
+
+  @include responsive-to(mobile) {
+    position: static;
+    padding: em(20px) em(10px);
+    text-align: left;
+  }
 }
 
 %service-item {
@@ -17,6 +23,11 @@
   color: $deep-purple;
   font-size: em(15px);
   display: block;
+
+  @include responsive-to(mobile) {
+    margin: 0 0 em(16px, 15px);
+    padding: 0 0 em(11px, 15px);
+  }
 }
 
 .service-list {
