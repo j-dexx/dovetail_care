@@ -1,4 +1,4 @@
-<section class="<%= home_page_section_presenter.css_class %>">
+<section class="<%= home_page_section_presenter.css_class %>" id="<%= home_page_section_presenter.css_class %>">
   <div class="row">
     <div class="small-12 columns">
       <div class="service-container">
@@ -8,7 +8,7 @@
 
         <div class="row service-list">
           <% @services.in_groups(3, false).each_with_index do |service_group, index| %>
-            <div class="small-12 medium-6 large-4 <%= 'end' if (index - 1) == service_group.count %> columns wow slideInUp" data-wow-delay=".<%= index * 25 %>s">
+            <div class="small-12 medium-6 large-4 <%= 'end' if (index - 1) == service_group.count %> columns animation" data-animation-type="slideInUp" data-animation-delay="<%= index * 25 %>0">
               <% service_group.each do |service| %>
                 <%= render 'services/service', service_presenter: ServicePresenter.new(object: service, view_template: self) %>
               <% end %>

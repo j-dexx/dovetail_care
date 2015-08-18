@@ -29,4 +29,9 @@ a.menu-link {
     border-bottom-color: $dark-purple;
     text-decoration: none;
   }
+
+  &.current-anchor {
+    border-bottom: 10px solid $dark-purple;
+    text-decoration: none;
+  }
 }

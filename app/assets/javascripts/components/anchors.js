@@ -7,7 +7,12 @@ $(document).on('click', 'a[href^=#]:not([href=#])', function() {
     }, 500);
   }
 
-  return false;
+  if($(this).hasClass('menu-link')) {
+    var $elem = $(this);
+    setTimeout(function(elem) { $elem.addClass('current-anchor'); }, 750);
+  } else {
+    return false;    
+  }
 });
 
 $(window).scroll(function() {
@@ -16,4 +21,6 @@ $(window).scroll(function() {
   } else if($(document).scrollTop() < 100) {
     $('.scroll-up').fadeOut();
   }
+
+  $('.current-anchor').removeClass('current-anchor');
 });

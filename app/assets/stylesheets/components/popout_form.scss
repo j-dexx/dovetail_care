@@ -10,6 +10,10 @@
   padding: em(30px) em(20px) 0;
   box-shadow: rgba(0, 0, 0, 0.29) -1px 0px 10px 0px;
 
+  @media screen and (max-height: 800px) {
+    overflow-y: scroll;
+  }
+
   @include responsive-to(tablet) {
     padding-top: em(10px);
     padding-bottom: em(10px);
@@ -81,6 +85,10 @@
 .form-popout-additional-information {
   position: absolute;
   bottom: 20px;
+
+  @media screen and (max-height: 800px) {
+    position: static;
+  }
 
   @include responsive-to(tablet) {
     position: static;

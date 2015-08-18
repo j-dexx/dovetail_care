@@ -45,7 +45,7 @@ header {
   margin-right: em(95px);
 
   @include responsive-to(tablet) {
-    padding: em(5px, 12px) em(4px, 12px) 0;
+    padding: em(5px, 12px) em(48px, 12px) 0 0;
   }
 
   @include responsive-to(mobile) {
@@ -69,8 +69,8 @@ header {
 
 .toggle-navigation {
   position: absolute;
-  right: 100px;
-  top: 40px;
+  right: 96px;
+  top: 7px;
 
   @include responsive-to(mobile) {
     top: 9px;

@@ -42,6 +42,7 @@
     right: 21px;
   }
 
+  &:link,
   &:visited {
     color: $white;
   }
@@ -71,6 +72,7 @@
   font-size: em(16px);
   text-decoration: none;
 
+  &:link,
   &:visited {
     color: $white;
   }

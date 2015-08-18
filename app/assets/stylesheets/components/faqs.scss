@@ -3,27 +3,28 @@
 }
 
 .faq-question {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+
+  @include responsive-to(tablet) {
+    width: 45%;
+    margin-right: 5%;
+  }
+
+  @include responsive-to(mobile) {
+    width: 100%;
+    margin-right: 0;
+  }
+
   a {
     display: block;
-    float: left;
     background: image-url('components/icons/q.png') no-repeat 0 0;
     padding: 0 0 0 em(53px);
     font-family: $secondary-serif-font;
     color: $dark-green;
     font-weight: 700;
     margin-bottom: em(46px);
-    width: 30%;
-    margin-right: 3%;
-
-    @include responsive-to(tablet) {
-      width: 45%;
-      margin-right: 5%;
-    }
-
-    @include responsive-to(mobile) {
-      width: 100%;
-      margin-right: 0;
-    }
 
     span {
       padding: 0 0 em(15px) 0;

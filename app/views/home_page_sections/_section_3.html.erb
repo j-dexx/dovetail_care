@@ -11,12 +11,12 @@
     });
   </script>
 <% end %>
-<section class="<%= home_page_section_presenter.css_class %>">
+<section class="<%= home_page_section_presenter.css_class %>" id="<%= home_page_section_presenter.css_class %>">
   <div class="row">
     <div class="small-12 columns">
         <h3><%= home_page_section_presenter.title %></h3>
 
-        <div class="wow slideInDown">
+        <div class="animation" data-animation-type="slideInDown">
           <div class="team-members-slider">
             <%= render partial: 'team_members/team_member', collection: @team_members, as: :team_member_presenter %>
           </div>

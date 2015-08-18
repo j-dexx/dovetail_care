@@ -1,2 +1,2 @@
-<%= image_tag gallery_image.image.horizontal, alt: gallery_image.title, class: "gallery-image-#{gallery_image_counter} wow slideInDown", data: { wow_delay: "0.#{gallery_image_counter * 25}s" } unless gallery_image_counter == 3 %>
-<%= image_tag gallery_image.image.potrait, alt: gallery_image.title, class: "gallery-image-#{gallery_image_counter} wow slideInDown", data: { wow_delay: "0.#{gallery_image_counter * 25}s" }  if gallery_image_counter == 3 %>
+<%= image_tag gallery_image.image.horizontal, alt: gallery_image.title, class: "gallery-image-#{gallery_image_counter} animation", data: { animation_type: "slideInDown", animation_delay: "#{gallery_image_counter * 25}0s" } unless gallery_image_counter == 3 %>
+<%= image_tag gallery_image.image.potrait, alt: gallery_image.title, class: "gallery-image-#{gallery_image_counter} animation", data: { animation_type: "slideInDown", animation_delay: "#{gallery_image_counter * 25}0s" }  if gallery_image_counter == 3 %>
