@@ -49,5 +49,4 @@ gem 'optimadmin', git: 'git@github.com:eskimosoup/Optimadmin.git'
 
  source 'https://rails-assets.org' do
    gem 'rails-assets-slick.js'
-   gem 'rails-assets-wow'
  end

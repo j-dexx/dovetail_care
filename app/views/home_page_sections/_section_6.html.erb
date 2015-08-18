@@ -1,15 +1,17 @@
-<section class="<%= home_page_section_presenter.css_class %>">
+<section class="<%= home_page_section_presenter.css_class %>" id="<%= home_page_section_presenter.css_class %>">
   <div class="row">
-    <div class="small-12 medium-5 columns wow slideInLeft">
-      <h2 class="text-center"><%= home_page_section_presenter.title %></h2>
+    <div class="small-12 medium-5 columns">
+      <div class="animation" data-animation-type="slideInLeft">
+        <h2 class="text-center"><%= home_page_section_presenter.title %></h2>
 
-      <%= home_page_section_presenter.content %>
+        <%= home_page_section_presenter.content %>
 
-      <div class="text-center">
-        <%= link_to 'Speak to one of our friendly team', contact_form_popout_contacts_path,
-            remote: true, class: 'action-button open-sidebar',
-            data: { container: '.form-popout', class: 'hide', return: 'true '}
-        %>
+        <div class="text-center">
+          <%= link_to 'Speak to one of our friendly team', contact_form_popout_contacts_path,
+              remote: true, class: 'action-button open-sidebar',
+              data: { container: '.form-popout', class: 'hide', return: 'true '}
+          %>
+        </div>
       </div>
     </div>
 
