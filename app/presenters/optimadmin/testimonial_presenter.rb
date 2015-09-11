@@ -9,5 +9,9 @@ module Optimadmin
     def summary
       h.strip_tags testimonial.summary
     end
+
+    def toggle_title
+      inline_detail_toggle_link(h.truncate summary, length: 80)
+    end
   end
 end

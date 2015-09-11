@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:eskimosoup/Optimadmin.git
-  revision: 289124e2b4bac03958abc1e01cc14dda76471103
+  revision: 13bbc9db4aa907580ae1c926a03b4a4c692b103b
   specs:
-    optimadmin (0.0.1)
+    optimadmin (0.0.5)
       bcrypt
       cancancan
       carrierwave
@@ -14,12 +14,13 @@ GIT
       mini_magick
       rails
       sass-rails
+      tinymce-rails
 
 GIT
   remote: git@github.com:eskimosoup/optimadmin_generators.git
-  revision: 06cc28672d75caee94a6774bb4c3dc01e7dc727b
+  revision: 238a9b9b6e1a8104a88aef7f41ddaddea4f28a5b
   specs:
-    optimadmin_generators (0.3.5)
+    optimadmin_generators (0.4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -70,8 +71,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
+    byebug (6.0.2)
     cancancan (1.12.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -88,10 +88,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    columnize (0.9.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    execjs (2.5.2)
+    execjs (2.6.0)
     extlib (0.9.16)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
@@ -136,7 +135,7 @@ GEM
     logging (2.0.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -169,7 +168,7 @@ GEM
       rails-assets-jquery (>= 1.7)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.6)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
@@ -184,7 +183,7 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     retriable (1.4.1)
-    sass (3.4.16)
+    sass (3.4.17)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -200,7 +199,7 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
-    sprockets (3.2.0)
+    sprockets (3.3.4)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)
@@ -209,6 +208,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    tinymce-rails (4.2.5)
+      railties (>= 3.1.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2015.6)

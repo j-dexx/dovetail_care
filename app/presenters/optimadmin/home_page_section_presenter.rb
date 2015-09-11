@@ -21,5 +21,9 @@ module Optimadmin
     def has_gallery?
       home_page_section.has_gallery
     end
+
+    def toggle_title
+      inline_detail_toggle_link(area)
+    end
   end
 end
