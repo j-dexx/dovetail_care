@@ -13,5 +13,9 @@ module Optimadmin
     def summary
       h.raw service.summary
     end
+
+    def toggle_title
+      inline_detail_toggle_link(title)
+    end
   end
 end
