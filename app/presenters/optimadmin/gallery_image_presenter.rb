@@ -15,7 +15,7 @@ module Optimadmin
     end
 
     def optimadmin_summary
-      h.gallery_image.image.square
+      h.image_tag gallery_image.image.square
     end
 
     def home_page_section_id
