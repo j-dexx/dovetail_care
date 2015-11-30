@@ -10,7 +10,7 @@ class TeamMemberPresenter < BasePresenter
   end
 
   def role
-    team_member.role
+    team_member.role if team_member.role.present?
   end
 
   def summary
