@@ -1,34 +1,36 @@
-<%= content_for :head do %>
-  <script>
-    $(document).ready(function() {
-      $('.testimonials-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        //autoplay: true,
-        //autoplaySpeed: 2000,
+<% if @testimonials.present? %>
+  <%= content_for :head do %>
+    <script>
+      $(document).ready(function() {
+        $('.testimonials-slider').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          //autoplay: true,
+          //autoplaySpeed: 2000,
+        });
       });
-    });
-  </script>
-<% end %>
-<section class="<%= home_page_section_presenter.css_class %>" id="<%= home_page_section_presenter.css_class %>">
-  <div class="row">
-    <div class="small-12 columns">
-      <div class="text-center">
-        <h4><%= home_page_section_presenter.title %></h4>
+    </script>
+  <% end %>
+  <section class="<%= home_page_section_presenter.css_class %>" id="<%= home_page_section_presenter.css_class %>">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="text-center">
+          <h4><%= home_page_section_presenter.title %></h4>
 
-        <%= home_page_section_presenter.content %>
+          <%= home_page_section_presenter.content %>
 
-      <div class="testimonials">
-        <%= image_tag 'components/testimonials/quote-open.png', alt: '', class: 'quote open' %>
-        <%= image_tag 'components/testimonials/quote-close.png', alt: '', class: 'quote close' %>
+        <div class="testimonials">
+          <%= image_tag 'components/testimonials/quote-open.png', alt: '', class: 'quote open' %>
+          <%= image_tag 'components/testimonials/quote-close.png', alt: '', class: 'quote close' %>
 
-        <div class="testimonials-slider">
-          <%= render partial: 'testimonials/testimonial',
-                    collection: @testimonials,
-                    as: :testimonial_presenter %>
+          <div class="testimonials-slider">
+            <%= render partial: 'testimonials/testimonial',
+                      collection: @testimonials,
+                      as: :testimonial_presenter %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
