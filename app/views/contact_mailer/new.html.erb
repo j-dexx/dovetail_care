@@ -25,7 +25,7 @@
     <p>
       <strong>Message:</strong>
       <br />
-      <%= @contact.message %>
+      <%= simple_format @contact.message %>
     </p>
 
     <% if @contact.callback_request == '1' %>
