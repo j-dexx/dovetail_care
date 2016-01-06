@@ -15,3 +15,8 @@
 //= require slick.js.js
 //= require vendor/onscreen
 //= require_tree .
+$(document).ready(function() {
+  $('.service-item').matchHeight({
+    byRow: false
+  });
+});

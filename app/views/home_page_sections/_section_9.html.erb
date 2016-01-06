@@ -20,9 +20,11 @@
                 <strong>Telephone</strong> <%= telephone_link %>
               </div>
 
-              <div class="contact-detail">
-                <strong>Facsimile</strong> <%= global_site_settings['Facsimle'] %>
-              </div>
+              <% if global_site_settings['Facsimle'].present? %>
+                <div class="contact-detail">
+                  <strong>Facsimile</strong> <%= global_site_settings['Facsimle'] %>
+                </div>
+              <% end %>
 
               <div class="contact-detail">
                 <strong>Email</strong> <%= global_site_settings['Email'] %>
