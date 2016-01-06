@@ -37,6 +37,14 @@ label {
   }
 }
 
+.name-fields {
+  margin: em(11px) em(10px) em(17px) 0;
+}
+
+.new_contact .medium-6:last-of-type .name-fields {
+  margin-right: 0;
+}
+
 %action-button {
   display: inline-block;
   margin: em(8px, 12px) auto em(4px, 12px);

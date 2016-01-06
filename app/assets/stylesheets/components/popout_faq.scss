@@ -24,6 +24,21 @@
   img {
     display: block;
   }
+
+  a {
+    color: $white;
+
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 .faq-popout-close-button {
