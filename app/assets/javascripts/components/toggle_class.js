@@ -5,6 +5,10 @@ $(document).on("click", ".toggle-class", function(e) {
 
   $(toggleContainer).toggleClass(toggleClass);
 
+  if($('.form-popout').hasClass('hide')) {
+    $('body').removeClass('overflow-y-hidden');
+  }
+
   if (dataReturn === 'false') {
     e.preventDefault();
   }

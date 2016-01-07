@@ -1,3 +1,15 @@
+@media screen and (min-width: 1023px) {
+  .toggle-navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navigation-wrap {
+    display: none;
+  }
+}
+
 nav {
   ul {
     @extend %clearfix;

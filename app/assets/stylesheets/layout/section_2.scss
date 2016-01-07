@@ -19,15 +19,13 @@
     line-height: 1.7;
     max-width: 325px;
 
-    @include responsive-to(mobile) {
+    @media screen and (min-width: 1023px) and (max-width: 1210px) {
+      max-width: 250px;
+    }
+
+    @media screen and (max-width: 1023px) {
       float: none;
       max-width: none;
-    }
-  }
-
-  @include responsive-to(tablet) {
-    p:nth-child(3) {
-      clear: left;
     }
   }
 

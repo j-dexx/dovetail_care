@@ -14,6 +14,8 @@ $(document).on('click', '.open-sidebar', function() {
     $(this).removeClass('hide').attr('style', '');
   });
 
+  $('body').addClass('overflow-y-hidden');
+
   if (dataReturn === 'false') {
     e.preventDefault();
   }
