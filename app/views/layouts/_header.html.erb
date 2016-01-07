@@ -43,11 +43,11 @@
     Telephone: <%= telephone_link %>
   </div>
 
-  <%= link_to '#navigation', class: 'toggle-navigation show-for-medium-down toggle-class', title: 'Show navigation', data: { class: 'hide-for-medium-down', container: 'nav', return: 'false '} do %>
+  <%= link_to '#navigation', class: 'toggle-navigation toggle-class', title: 'Show navigation', data: { class: 'navigation-wrap', container: 'nav', return: 'false '} do %>
     <%= image_tag 'components/icons/burger-menu.png', alt: 'Navigation' %>
   <% end %>
 
-  <nav class="row hide-for-medium-down">
+  <nav class="row navigation-wrap">
     <div class="small-12 medium-8 columns">
       <ul>
         <%= nested_menu_items(menu_items: @header_menu.menu_items) %>

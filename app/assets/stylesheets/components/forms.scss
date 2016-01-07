@@ -8,6 +8,14 @@ label {
   margin: em(11px) 0 em(17px);
   padding: 0;
 
+  .field_with_errors {
+    input[type='text'],
+    textarea {
+      border-top-color: $light-purple;
+      border: 1px solid $light-purple;
+    }
+  }
+
   input[type='text'],
   textarea {
     display: block;
