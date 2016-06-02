@@ -32,15 +32,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
+group :development do
+  gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
 
-gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git', group: :development
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
+
 gem 'optimadmin', git: 'git@github.com:eskimosoup/Optimadmin.git', branch: 'master'
 
 source 'https://rails-assets.org' do

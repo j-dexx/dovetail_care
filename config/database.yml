@@ -61,6 +61,8 @@ development:
 test:
   <<: *default
   database: dovetail_care_test
+  username: postgres
+  password: tmedia
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
