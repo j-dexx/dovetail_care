@@ -1,6 +1,6 @@
 class LandingPagesController < ApplicationController
   def show
-    @header_menu = Optimadmin::Menu.new(name: "header")
+    @header_menu = Optimadmin::Menu.new(name: "landing_pages")
     @home_page_sections = BaseCollectionPresenter.new(
       collection: HomePageSection.ordered.where.not(area: non_recruitment_sections),
       view_template: view_context,
