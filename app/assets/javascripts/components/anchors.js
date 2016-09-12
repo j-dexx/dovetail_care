@@ -1,4 +1,4 @@
-$(document).on('click', 'a[href^=#]:not([href=#])', function() {
+$(document).on('click', 'a[href^=\\#]:not([href=\\#])', function() {
   var target = $(this.hash);
 
   if(target.length) {
@@ -11,7 +11,7 @@ $(document).on('click', 'a[href^=#]:not([href=#])', function() {
     var $elem = $(this);
     setTimeout(function(elem) { $elem.addClass('current-anchor'); }, 750);
   } else {
-    return false;    
+    return false;
   }
 });
 

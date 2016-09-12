@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
-//= require slick.js.js
 //= require vendor/onscreen
 //= require_tree .
+
 $(document).ready(function() {
   $('.service-item').matchHeight({
     byRow: false

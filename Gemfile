@@ -53,6 +53,3 @@ end
 
 gem 'optimadmin', git: 'git@github.com:eskimosoup/Optimadmin.git', branch: 'master'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-slick.js'
-end

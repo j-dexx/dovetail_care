@@ -22,6 +22,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
 
   def recruitment_form_popout
     respond_to do |format|
@@ -35,10 +36,9 @@ class ContactsController < ApplicationController
     end
   end
 
-  end
-
   private
-    def contact_params
-      params.require(:contact).permit(:forename, :surname, :telephone, :email, :message, :callback_request, :form)
-    end
+
+  def contact_params
+    params.require(:contact).permit(:forename, :surname, :telephone, :email, :message, :callback_request, :form)
+  end
 end

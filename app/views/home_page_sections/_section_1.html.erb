@@ -6,11 +6,11 @@
 
     <div class="small-12 medium-6 columns">
       <div class="section-1-content">
-        <h1>
-          <%= home_page_section_presenter.title %>
-        </h1>
-
         <% if params[:controller] == 'application' %>
+          <h1>
+            <%= home_page_section_presenter.title %>
+          </h1>
+
           <%= link_to 'We are recruiting: Join our amazing team', recruitment_form_popout_contacts_path,
               remote: true, class: 'action-button open-sidebar',
               data: { container: '.form-popout', class: 'hide', return: 'true '}
@@ -21,8 +21,14 @@
               data: { container: '.form-popout', class: 'hide', return: 'true '}
           %>
         <% elsif params[:controller] == 'landing_pages' %>
+          <h1 class="landing-page">
+            We are recruiting
+          </h1>
+
           <div>
-            <h3>We are recruiting</h3>
+            <h3>
+              <%= home_page_section_presenter.title %>
+            </h3>
             <ul>
               <li>
                 New increased rates of pay from £8.00 - £8.75 per hour, £4.75 - £5.50 per half-hour
@@ -35,10 +41,17 @@
               </li>
             </ul>
 
-            <%= link_to 'Join our amazing team', recruitment_form_popout_contacts_path,
-              remote: true, class: 'action-button open-sidebar',
-              data: { container: '.form-popout', class: 'hide', return: 'true '}
-            %>
+            <%= link_to(
+              'Join our amazing team',
+              recruitment_form_popout_contacts_path,
+              data: {
+                container: '.form-popout',
+                class: 'hide',
+                return: 'true'
+              },
+              class: 'action-button open-sidebar',
+              remote: true
+            ) %>
           </div>
         <% end %>
       </div>
