@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get 'request_appointment_form_popout'
     end
   end
+  get 'recruitment', to: 'landing_pages#show', as: :recruitment
+
   mount Optimadmin::Engine => "/admin"
   root to: "application#index"
 end

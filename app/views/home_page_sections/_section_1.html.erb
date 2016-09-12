@@ -10,15 +10,37 @@
           <%= home_page_section_presenter.title %>
         </h1>
 
-        <%= link_to 'We are recruiting: Join our amazing team', recruitment_form_popout_contacts_path,
-            remote: true, class: 'action-button open-sidebar',
-            data: { container: '.form-popout', class: 'hide', return: 'true '}
-        %>
+        <% if params[:controller] == 'application' %>
+          <%= link_to 'We are recruiting: Join our amazing team', recruitment_form_popout_contacts_path,
+              remote: true, class: 'action-button open-sidebar',
+              data: { container: '.form-popout', class: 'hide', return: 'true '}
+          %>
 
-        <%= link_to 'Make an appointment to see how we can provide help and support', request_appointment_form_popout_contacts_path,
-            remote: true, class: 'action-button open-sidebar',
-            data: { container: '.form-popout', class: 'hide', return: 'true '}
-        %>
+          <%= link_to 'Make an appointment to see how we can provide help and support', request_appointment_form_popout_contacts_path,
+              remote: true, class: 'action-button open-sidebar',
+              data: { container: '.form-popout', class: 'hide', return: 'true '}
+          %>
+        <% elsif params[:controller] == 'landing_pages' %>
+          <div>
+            <h3>We are recruiting</h3>
+            <ul>
+              <li>
+                New increased rates of pay from £8.00 - £8.75 per hour, £4.75 - £5.50 per half-hour
+              </li>
+              <li>
+                Mileage paid at 25p per mile and company pension
+              </li>
+              <li>
+                Please do not apply if you do not have a driving license and your own transport
+              </li>
+            </ul>
+
+            <%= link_to 'Join our amazing team', recruitment_form_popout_contacts_path,
+              remote: true, class: 'action-button open-sidebar',
+              data: { container: '.form-popout', class: 'hide', return: 'true '}
+            %>
+          </div>
+        <% end %>
       </div>
     </div>
 

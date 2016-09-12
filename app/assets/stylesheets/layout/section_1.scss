@@ -102,16 +102,34 @@
   background: $pastel-green;
   box-shadow: $dark-green 0px 0px 20px 0px;
 
+  h1, h3, p, li {
+    font-family: $secondary-serif-font;
+    color: $dark-green;
+    font-weight: 300;
+  }
+
   h1 {
     margin: 0 0 em(9px, 21px);
     padding: 0 em(20px, 21px);
-    font-family: $secondary-serif-font;
-    color: $dark-green;
     font-size: em(21px);
-    font-weight: 300;
     text-align: center;
     line-height: 1.5;
   }
+
+  h3 {
+    margin: em(30px, 21px) 0 em(9px, 21px);
+    padding: 0 em(20px, 21px);
+    font-size: em(21px);
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin: em(10px, 21px) auto;
+    }
+  }
+
 
   .action-button {
     margin: em(17px) 0;
