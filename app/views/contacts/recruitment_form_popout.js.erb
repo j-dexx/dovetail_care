@@ -1,15 +1,1 @@
 $('.form-area').replaceWith('<%= j render "contacts/sidebars/#{form_partial_helper('recruitment')}" %>')
-var form = $('#new_contact');
-form.addEventListener('submit', function(event) {
-  // Prevents the browser from submiting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-  // Sends the event to Google Analytics and
-  // resubmits the form once the hit is done.
-  ga('send', 'event', 'Landing page recruitment form', 'submit', {
-    hitCallback: function() {
-      form.submit();
-    }
-  });
-});

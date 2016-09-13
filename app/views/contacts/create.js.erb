@@ -5,3 +5,4 @@
   $('.in-page-form-area').replaceWith('<%= j render "contacts/sidebars/#{form_partial_helper(@contact.form)}" %>')
   $('.in-page-form-area input[type="text"], textarea').val('');
 <% end %>
+ga('send', 'event', 'Form submission', 'submit');
